@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="light">
+    <div class="container">
+      <div id="equation"></div>
+      <div id="result">0</div>
+      <table>
+        <tr>
+          <td class="sign">
+            <button class="btn" onclick="reset()" style="border: var(--btn-border);">Ac</button>
+        </td>
+          <td class="sign">
+            <button class="btn" onclick="removeLastNumber()"style="border: var(--btn-border);">
+              <ion-icon name="backspace-outline"></ion-icon>
+            </button>
+          </td>
+          <td class="sign">
+            <button class="btn" value="÷" onclick="getInput(this)"style="border: var(--btn-border);">÷</button>
+          </td>
+          <td class="sign">
+            <button class="btn" value="×" onclick="getInput(this)"style="border: var(--btn-border);">×</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="btn" value="7" onclick="getInput(this)"style="border: var(--btn-border);">7</button>
+          </td>
+          <td>
+            <button class="btn" value="8" onclick="getInput(this)"style="border: var(--btn-border);">8</button>
+          </td>
+          <td>
+            <button class="btn" value="9" onclick="getInput(this)"style="border: var(--btn-border);">9</button>
+          </td>
+          <td class="sign">
+            <button class="btn" value="-" onclick="getInput(this)"style="border: var(--btn-border);">-</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="btn" value="4" onclick="getInput(this)"style="border: var(--btn-border);">4</button>
+          </td>
+          <td>
+            <button class="btn" value="5" onclick="getInput(this)"style="border: var(--btn-border);">5</button>
+          </td>
+          <td>
+            <button class="btn" value="6" onclick="getInput(this)"style="border: var(--btn-border);">6</button>
+          </td>
+          <td class="sign">
+            <button class="btn" value="+" onclick="getInput(this)"style="border: var(--btn-border);">+</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="btn" value="1" onclick="getInput(this)"style="border: var(--btn-border);">1</button>
+          </td>
+          <td>
+            <button class="btn" value="2" onclick="getInput(this)"style="border: var(--btn-border);">2</button>
+          </td>
+          <td>
+            <button class="btn" value="3" onclick="getInput(this)"style="border: var(--btn-border);">3</button>
+          </td>
+          <td rowspan="2" class="sign">
+            <button class="btn" value="=" onclick="evalute()"style="border: var(--btn-border);">=</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="btn sign" value="%" onclick="getInput(this)"style="border: var(--btn-border);">
+              %
+            </button>
+          </td>
+          <td>
+            <button class="btn" value="0" onclick="getInput(this)"style="border: var(--btn-border);">0</button>
+          </td>
+          <td>
+            <button class="btn" value="." onclick="getInput(this)"style="border: var(--btn-border);">.</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
